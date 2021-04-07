@@ -23,7 +23,7 @@ def get_singer(l, singers):
         singers.append(l[i])
     return singers
 singers = []
-data = pd.read_csv('/Users/anastasia/Desktop/archive/data.csv')
+data = pd.read_csv('data.csv')
 data.sort_values(['year'], inplace = True)
 
 dat = data.copy()
@@ -42,7 +42,7 @@ for i in dat['artists'].values:
 subdat = dat.groupby('year').mean()
 
 st.set_page_config(page_title="Spotify insights",
-                   page_icon='/Users/anastasia/Desktop/archive/spotlog.png',
+                  # page_icon='/Users/anastasia/Desktop/archive/spotlog.png',
                    layout='wide')
 st.title("Insights of Spotify music library")
 st.markdown(
